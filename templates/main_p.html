@@ -11,17 +11,47 @@
     <title>Document</title>
  </head>
  <body>
+
+ <nav class="navbar bg-body-tertiary" >
+  <div class="container-fluid">
+    <a class="navbar-brand">
+        <h6>UserID : 2377657</h6>
+        <h6>Name : Meenakshi Pareekh</h6>
+    </a>
+      <button class="btn btn-warning" type="submit">Logout</button>
+  </div>
+</nav>
+
  <div class = "container ">
  <!-- As a link -->
+
 <div class="d-grid gap-2">
     <hr>
+     <h1>Read Right</h1>
     <hr>
-<a href="/orderlist_book/" class = "btn btn-warning btn-lg" type="button">Available Books</a>
-    <hr>
-    <a href="/bookadd/" class = " btn btn-warning btn-lg" type="button">Add New Books</a>
-    <hr>
-<a href="/issue/" class = " btn btn-warning btn-lg" type="button">Issue Books</a>
-</div>
+     <div class="card text-bg-light mb-3">
+         <div class="card-body">
+         <h5 class="card-title">Book Availability</h5>
+         <p class="card-text">Click here to see number of books avaialble in the Library.</p>
+             <a href="/orderlist_book/" class = "btn btn-warning" type="button">Available Books</a>
+        </div>
+     </div>
+    <div class="card text-bg-light mb-3">
+         <div class="card-body">
+         <h5 class="card-title">Add New Books</h5>
+         <p class="card-text">Click here to add new stock of books  in the Library.</p>
+             <a href="/bookadd/" class = " btn btn-warning" type="button">Add Books</a>
+        </div>
+     </div>
+    <div class="card text-bg-light mb-3">
+         <div class="card-body">
+         <h5 class="card-title">Issue Books</h5>
+         <p class="card-text">Click here to issue books and see number of books already issued from the Library.</p>
+             <a href="/issue/" class = " btn btn-warning" type="button">Issue Books</a>
+        </div>
+     </div>
+
+
 
  </div>
  </body>
