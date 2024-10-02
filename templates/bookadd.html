@@ -12,16 +12,21 @@
  </head>
  <body>
 
-  <nav class="navbar bg-body-tertiary" >
+    <nav class="navbar bg-warning" >
   <div class="container-fluid">
     <a class="navbar-brand">
-        <h6>UserID : 2377657</h6>
-        <h6>Name : Meenakshi Pareekh</h6>
+        {% if user.is_authenticated %}
+        <h6>Name : {{ user.get_full_name }}</h6>
+        <h6>User : {{ user.username }}</h6>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+         <a href="/main_p/" class = "btn btn-dark" type="button">Home</a>
+        <a href="/logoutlib/" class="btn btn-dark" type="submit">Logout</a>
+        </div>
+        {% endif %}
     </a>
-      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-      <a href="/main_p/" class = "btn btn-warning" type="button">Home</a>
-      <button class="btn btn-warning" type="submit">Logout</button>
-          </div>
+
+  </div>
+</nav>
 
      <div class = "container ">
          <h2>Add Books</h2>
@@ -46,7 +51,7 @@
                  <textarea class = "form-control" name="book_desc" required></textarea>
              </div>
 
-             <button type="submit" class="btn btn-primary">Add Book </button>
+             <button type="submit" class="btn btn-warning">Add Book </button>
          </form>
      </div>
  </body>
